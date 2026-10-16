@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maximiliano Araya Pastore · Técnico Junior en Sistemas y Redes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F3F7F9;--surface:#FFFFFF;--ink:#0B1F2E;--muted:#4A5E6C;--line:#D5E1E8;--accent:#0E8CA8;--accent-ink:#FFFFFF;
+  --term:#0B1F2E;--term-ink:#D9EEF4;--term-acc:#3FD0EB;
+  --head:'Oswald','Arial Narrow',Impact,sans-serif;--body:'Roboto',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;--bg:#07131C;--surface:#0F2230;--ink:#E6F1F6;--muted:#9DB4C2;--line:#1D3647;--accent:#3FD0EB;--accent-ink:#07131C;--term:#040C12;}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#07131C;--surface:#0F2230;--ink:#E6F1F6;--muted:#9DB4C2;--line:#1D3647;--accent:#3FD0EB;--accent-ink:#07131C;--term:#040C12;}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--head);margin:0;line-height:1.05}
+h1{font-size:clamp(3rem,11vw,6.6rem);font-weight:700;letter-spacing:.01em;text-transform:uppercase}
+h2{font-size:clamp(1.8rem,5vw,2.5rem);font-weight:700;text-transform:uppercase;margin-bottom:28px;display:flex;align-items:center;gap:16px}
+h2::after{content:"";height:3px;flex:1;max-width:120px;background:var(--accent)}
+h3{font-size:1.3rem;font-weight:500}
+section{padding:64px 0}
+/* hero */
+.hero{padding:56px 0 40px}
+.hero .role{font-size:clamp(1.1rem,3vw,1.5rem);color:var(--muted);margin:18px 0 26px;max-width:30ch}
+.hero-grid{display:grid;gap:36px;align-items:center}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.1fr 1fr}}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;font-weight:500;text-decoration:none;border:2px solid var(--accent);transition:transform .2s,background .2s}
+.btn.main{background:var(--accent);color:var(--accent-ink)}
+.btn:hover{transform:translateY(-2px)}
+.term{background:var(--term);color:var(--term-ink);border-radius:12px;font:14px/1.7 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;box-shadow:0 18px 50px rgba(7,19,28,.28);overflow:hidden}
+.term-bar{display:flex;gap:7px;padding:12px 14px;background:rgba(255,255,255,.06)}
+.term-bar i{width:11px;height:11px;border-radius:50%;background:#3b5568}
+.term-body{padding:16px 18px 20px;min-height:300px;overflow-wrap:anywhere}
+.term .p{color:var(--term-acc)}.term .o{color:#9fc3d1;margin:0 0 8px}
+.caret{display:inline-block;width:8px;height:1em;background:var(--term-acc);vertical-align:-2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+/* cards */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+.lead{max-width:62ch;font-size:1.1rem}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;padding:0;list-style:none}
+.chips li{padding:6px 14px;border:1px solid var(--line);border-radius:99px;background:var(--surface);font-size:.95rem}
+.tl{border-left:3px solid var(--accent);padding-left:26px;position:relative}
+.tl::before{content:"";position:absolute;left:-10px;top:6px;width:17px;height:17px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.tl .org{color:var(--muted);margin:4px 0 14px}
+ul.tick{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+ul.tick li{padding-left:28px;position:relative}
+ul.tick li::before{content:"";position:absolute;left:2px;top:.62em;width:12px;height:7px;border-left:3px solid var(--accent);border-bottom:3px solid var(--accent);transform:rotate(-45deg) translateY(-50%)}
+.grid{display:grid;gap:18px}
+@media(min-width:700px){.grid.c2{grid-template-columns:1fr 1fr}.grid.c3{grid-template-columns:repeat(3,1fr)}}
+.skill{transition:transform .25s,border-color .25s}
+.skill:hover{transform:translateY(-4px);border-color:var(--accent)}
+.skill h3{margin-bottom:6px}.skill p{margin:0;color:var(--muted);font-size:.98rem}
+.lang{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;padding:14px 0;border-bottom:1px solid var(--line)}
+.lang:last-child{border:0}
+.lang small{color:var(--muted);display:block}
+.seg{display:flex;gap:5px}
+.seg b{width:30px;height:8px;border-radius:4px;background:var(--line);transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.seg b.on{background:var(--accent)}.seg b.half{background:linear-gradient(90deg,var(--accent) 50%,var(--line) 50%)}
+.in .seg b{transform:scaleX(1)}
+.seg b:nth-child(2){transition-delay:.08s}.seg b:nth-child(3){transition-delay:.16s}.seg b:nth-child(4){transition-delay:.24s}
+.contact a.row{display:flex;gap:14px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line);text-decoration:none;overflow-wrap:anywhere}
+.contact a.row:hover{color:var(--accent)}
+.contact .k{min-width:84px;color:var(--muted)}
+footer{padding:30px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+/* single reveal on scroll */
+.rv{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.seg b{transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Maximiliano<br>Araya Pastore</h1>
+      <p class="role">Técnico Junior en Sistemas y Redes. Estudiante de ASIR (2º curso), en Málaga.</p>
+      <div class="cta">
+        <a class="btn main" href="#contacto">Contactar</a>
+        <a class="btn" href="#experiencia">Ver experiencia</a>
+      </div>
+    </div>
+    <div class="term" aria-label="Resumen en formato terminal">
+      <div class="term-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="term-body" id="term">
+        <div><span class="p">$ </span>whoami</div><p class="o">maximiliano-araya-pastore</p>
+        <div><span class="p">$ </span>cat rol.txt</div><p class="o">Técnico Junior en Sistemas y Redes</p>
+        <div><span class="p">$ </span>cat formacion.txt</div><p class="o">ASIR, 2º curso · Digitech, Málaga</p>
+        <div><span class="p">$ </span>ls habilidades/</div><p class="o">linux  virtualización  sql  servidores  redes  hardware</p>
+        <div><span class="p">$ </span>cat estado.txt</div><p class="o">Disponible para la FCT y puestos junior</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="perfil"><div class="wrap rv">
+  <h2>Perfil</h2>
+  <p class="lead">Estudiante de 2º de ASIR con base práctica en Linux, virtualización, servidores, redes y bases de datos SQL, adquirida participando en implementaciones reales de software en Tauruszone. Con inglés B2 (Cambridge) para trabajar en entornos internacionales.</p>
+  <p class="lead">Busco una empresa tecnológica con buen equipo técnico donde aprender, crecer y construir una carrera en administración de sistemas y redes. Disponible para la FCT y para puestos junior de sistemas o soporte de redes.</p>
+</div></section>
+
+<section id="experiencia"><div class="wrap rv">
+  <h2>Experiencia</h2>
+  <div class="tl">
+    <h3>Colaborador técnico en implementación y redes</h3>
+    <p class="org">Tauruszone, empresa de software de gestión para turismo</p>
+    <ul class="tick">
+      <li>Participación en la implementación y puesta en marcha de software de gestión en entornos reales.</li>
+      <li>Uso de servidores como parte de la implementación del software.</li>
+      <li>Consultas SQL y copias de seguridad (backups) de bases de datos.</li>
+      <li>Tareas de redes asociadas a la puesta en marcha de los sistemas.</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="habilidades"><div class="wrap rv">
+  <h2>Habilidades técnicas</h2>
+  <div class="grid c3">
+    <div class="card skill"><h3>Sistemas operativos</h3><p>Linux</p></div>
+    <div class="card skill"><h3>Virtualización</h3><p>Virtualización de máquinas</p></div>
+    <div class="card skill"><h3>Bases de datos</h3><p>SQL: consultas y backups</p></div>
+    <div class="card skill"><h3>Servidores y redes</h3><p>Implementación en entorno real</p></div>
+    <div class="card skill"><h3>Hardware</h3><p>Montaje y configuración de equipos</p></div>
+  </div>
+</div></section>
+
+<section id="formacion"><div class="wrap rv">
+  <h2>Formación</h2>
+  <div class="tl">
+    <h3>CFGS Administración de Sistemas Informáticos en Red (ASIR)</h3>
+    <p class="org">Digitech, Málaga · 2º curso · Finalización prevista: junio 2027</p>
+    <ul class="chips" style="margin-top:0">
+      <li>Sistemas operativos</li><li>Redes</li><li>Servicios de red</li><li>Bases de datos</li><li>Seguridad informática</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="idiomas"><div class="wrap rv">
+  <h2>Idiomas</h2>
+  <div class="card" id="langs">
+    <div class="lang"><div><strong>Inglés</strong><small>B2, certificado Cambridge</small></div>
+      <div class="seg" role="img" aria-label="Nivel B2 de 6"><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b></b><b></b></div></div>
+    <div class="lang"><div><strong>Alemán</strong><small>A2-B1, formación en colegio alemán</small></div>
+      <div class="seg" role="img" aria-label="Nivel A2 a B1"><b class="on"></b><b class="on"></b><b class="half"></b><b></b><b></b><b></b></div></div>
+    <div class="lang"><div><strong>Portugués</strong><small>A2</small></div>
+      <div class="seg" role="img" aria-label="Nivel A2"><b class="on"></b><b class="on"></b><b></b><b></b><b></b><b></b></div></div>
+  </div>
+</div></section>
+
+<section id="proyectos"><div class="wrap rv">
+  <h2>Proyectos personales</h2>
+  <div class="card skill"><h3>Equipos informáticos personales</h3><p>Montaje y configuración de equipos informáticos personales.</p></div>
+</div></section>
+
+<section id="contacto"><div class="wrap rv contact">
+  <h2>Contacto</h2>
+  <a class="row" href="mailto:maximilianoapastore@gmail.com"><span class="k">Correo</span>maximilianoapastore@gmail.com</a>
+  <a class="row" href="tel:+34651327490"><span class="k">Teléfono</span>+34 651 327 490</a>
+  <a class="row" href="https://www.linkedin.com/in/Maximiliano-araya-pastore" target="_blank" rel="noopener"><span class="k">LinkedIn</span>linkedin.com/in/Maximiliano-araya-pastore</a>
+  <div class="row" style="display:flex;gap:14px;padding:16px 0"><span class="k">Ubicación</span>Málaga, España</div>
+</div></section>
+</main>
+<footer><div class="wrap">Maximiliano Araya Pastore · Técnico Junior en Sistemas y Redes</div></footer>
+
+<script>
+(function(){
+  var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Scroll reveal
+  var els=document.querySelectorAll('.rv,#langs');
+  if('IntersectionObserver' in window && !rm){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    els.forEach(function(el){io.observe(el)});
+  } else { els.forEach(function(el){el.classList.add('in')}); }
+  // Terminal typing (single orchestrated moment)
+  var t=document.getElementById('term'); if(!t||rm) return;
+  var rows=[];
+  t.querySelectorAll('div').forEach(function(d){rows.push([d.textContent.replace(/^\$ /,''),d.nextElementSibling.textContent])});
+  t.innerHTML='';
+  var i=0;
+  function next(){
+    if(i>=rows.length){var c=document.createElement('span');c.className='caret';t.lastChild.appendChild(c);return}
+    var line=document.createElement('div');line.innerHTML='<span class="p">$ </span><span></span><span class="caret"></span>';
+    var out=document.createElement('p');out.className='o';
+    t.appendChild(line);var tx=line.children[1],cr=line.children[2],cmd=rows[i][0],j=0;
+    (function type(){
+      if(j<cmd.length){tx.textContent+=cmd[j++];setTimeout(type,45)}
+      else{cr.remove();out.textContent=rows[i][1];t.appendChild(out);i++;setTimeout(next,380)}
+    })();
+  }
+  setTimeout(next,500);
+})();
+</script>
+</body>
+</html>
